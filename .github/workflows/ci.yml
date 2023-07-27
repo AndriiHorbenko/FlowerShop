@@ -39,6 +39,7 @@ jobs:
 #      - name: Run build
 #        run: npm run build --prefix frontend
 
+
   java-ci-checks:
     name: Automated Java CI checks
     runs-on: ubuntu-latest
