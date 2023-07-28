@@ -2,7 +2,7 @@ addons:
   sonarcloud:
     organization: "flowershop"
     token:
-      secure: "a65076a82776950cfa734ac1541444e742464df0" # encrypted value of your token
+      secure: "5aeced66f58866b64ad6e243826bef2fa2440582" # encrypted value of your token
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
