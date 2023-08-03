@@ -3,12 +3,15 @@ import { Outlet, useNavigate} from "react-router-dom";
 
 export function Layout() {
     const navigate = useNavigate();
-    // let location = useLocation();
     useEffect(() => {
         navigate("/home");
-    }, []);
+    }, [navigate]);
     return (
-        <Outlet/>
+        <>
+            <header>Header</header>
+            <Outlet/>
+            <footer>Footer</footer>
+        </>
     );
 }
 
