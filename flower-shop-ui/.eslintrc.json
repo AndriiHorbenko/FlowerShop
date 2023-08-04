@@ -1,0 +1,14 @@
+{
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "plugins": ["react", "react-hooks"],
+    "rules": {
+        "no-trailing-spaces": ["error", { "skipBlankLines": true } ], //Забороняє пробіли в кінці рядка.
+        "arrow-spacing": "error", //Вимагає пропусків навколо оператора => у стрілкових функціях.
+        "no-unused-vars": "warn", //Попереджує, якщо в коді є змінна, яка не використовується.
+        "no-undef": "error", //Вимагає, щоб змінні були оголошені перед використанням.
+        "no-extra-semi": "error", //Попереджує про зайву крапку з комою, яка з'являється після декларації змінної або іншого виразу.
+        "no-duplicate-imports": "warn", //Вимагає, щоб імпорти не повторювалися, коли вони вже з'явилися у файлі.
+        "react/jsx-no-undef": "warn", //Попереджує, якщо використовуються невизначені ідентифікатори у JSX-коді.
+        "react-hooks/rules-of-hooks": "warn" //Попереджує про неправильне використання React hooks, таких як useState, useEffect, тощо.
+        }
+  }
