@@ -12,6 +12,7 @@ public class FlowerShopApplicationTests {
   public void contextLoads() {
 
     Dotenv dotenv = Dotenv.configure().load();
+    dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
     String test_key = dotenv.get("TEST_KEY");
     Assertions.assertEquals("test_value", test_key);
   }
