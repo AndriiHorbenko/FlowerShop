@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.test.context.TestPropertySource;
 
 @TestPropertySource(locations = "classpath:test.env")
-class FlowerShopApplicationTests {
+class FlowerShopApplicationTest {
 
   private Dotenv dotenv;
 
@@ -17,7 +17,7 @@ class FlowerShopApplicationTests {
   }
 
   @Test
-  void testEnvironmentVariablesLoaded() {
+  void main() {
     Assertions.assertNotNull(dotenv);
   }
 }
