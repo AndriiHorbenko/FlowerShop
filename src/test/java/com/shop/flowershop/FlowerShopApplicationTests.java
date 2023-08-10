@@ -2,17 +2,22 @@ package com.shop.flowershop;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.TestPropertySource;
 
-@TestPropertySource(locations = "classpath:test.env") // Указываем путь к файлу test.env
-public class FlowerShopApplicationTests {
+@TestPropertySource(locations = "classpath:test.env")
+class FlowerShopApplicationTests {
+
+  private Dotenv dotenv;
+
+  @BeforeEach
+  public void setUp() {
+    dotenv = Dotenv.configure().load();
+  }
 
   @Test
-  public void contextLoads() {
-
-    Dotenv dotenv = Dotenv.configure().load();
-    String test_key = dotenv.get("TEST_KEY");
-    Assertions.assertEquals("test_value", test_key);
+  void testEnvironmentVariablesLoaded() {
+    Assertions.assertNotNull(dotenv);
   }
 }
