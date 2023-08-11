@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FlowerShopApplication {
 
   public static void main(String[] args) {
-    Env environment = new Env();
+    Env env = new Env();
     SpringApplication.run(FlowerShopApplication.class, args);
   }
 }

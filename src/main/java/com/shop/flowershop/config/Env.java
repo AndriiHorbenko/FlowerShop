@@ -1,14 +1,16 @@
 package com.shop.flowershop.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 public class Env {
   public Env() {
     try {
       Dotenv dotenv = Dotenv.configure().load();
       dotenv.entries().forEach(entry -> setEnv(entry.getKey(), entry.getValue()));
     } catch (Exception e) {
-      e.printStackTrace();
+      log.info("DOTENV Error");
     }
   }
 
