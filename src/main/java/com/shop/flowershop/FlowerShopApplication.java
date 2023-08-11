@@ -1,14 +1,13 @@
 package com.shop.flowershop;
 
-import io.github.cdimascio.dotenv.Dotenv;
+import com.shop.flowershop.config.Environment;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class FlowerShopApplication {
   public static void main(String[] args) {
-    Dotenv dotenv = Dotenv.configure().load();
-    dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
+    Environment environment = new Environment();
     SpringApplication.run(FlowerShopApplication.class, args);
   }
 }
