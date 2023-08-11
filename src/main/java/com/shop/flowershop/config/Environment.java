@@ -6,9 +6,10 @@ public class Environment {
 
   public Environment() {
     Dotenv dotenv = Dotenv.configure().load();
-    dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
+    dotenv.entries().forEach(entry -> setEnvironment(entry.getKey(), entry.getValue()));
   }
-  public void setEnvironment(String key, String value){
+
+  public void setEnvironment(String key, String value) {
     System.setProperty(key, value);
   }
 }
