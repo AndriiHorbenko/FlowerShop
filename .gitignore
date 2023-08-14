@@ -36,8 +36,8 @@ data/
 /test-results/
 /playwright-report/
 /playwright/.cache/
-/social-network-ui/package-lock.json
-/social_network_api/src/main/resources/.env
+/flower-shop-ui/package-lock.json
+/src/main/resources/.env
 
 e2e/playwright
 e2e/playwright-report
