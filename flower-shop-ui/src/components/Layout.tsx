@@ -13,6 +13,10 @@ import BG3 from "./../assets/BG3.png"
 export function Layout() {
     const navigate = useNavigate();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    
+    useEffect(() => {
+        navigate("/home");
+    }, [navigate]);
   
     const images = [BG1, BG2, BG3];
     const totalImages = images.length;
@@ -48,7 +52,7 @@ export function Layout() {
                 <ArrowLeft onClick={() => handleArrowClick("left")}>&lt;</ArrowLeft>
                 <ArrowRight onClick={() => handleArrowClick("right")}>&gt;</ArrowRight>
             </HeaderWrapper>
-            <Outlet/>
+            <Outlet />
             <FooterWrapper>
                 <div>
                     <img src={copper_pro_logo} style={{height: "30px"}}/>

@@ -51,7 +51,6 @@ export const FooterWrapper = styled.div`
     position: relative;
 `;
 export const FooterRightWrapper = styled.div`
-    margin: 0;
     padding: 20px;
     display: flex;
     justify-content: space-between;
